@@ -16,10 +16,10 @@ $circle = new Circle(5);
 $level = 'ERROR';
 $message = ' /\/\/5 ';
 
-$logger = new Logger($level, $message);
+// $logger = new Logger($level, $message);
 
-echo '<pre>';
-print_r($logger);
-echo '</pre>';
+// echo '<pre>';
+// print_r($logger);
+// echo '</pre>';
 
 echo date('Y-m-d H:m:s');
