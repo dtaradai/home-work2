@@ -1,5 +1,5 @@
 <?php
-namespace HW\Figure;
+namespace Figure;
 
 class Rectangle extends Figure {
   public $width;

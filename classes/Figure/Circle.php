@@ -1,5 +1,5 @@
 <?php
-namespace HW\Figure;
+namespace Figure;
 
 class Circle extends Figure {
   public $radius;

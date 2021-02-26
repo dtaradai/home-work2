@@ -1,5 +1,5 @@
 <?php
-namespace HW\Figure;
+namespace Figure;
 
 class Triangle extends Figure {
   public $sideA;
@@ -23,8 +23,8 @@ class Triangle extends Figure {
   public function square() {
     $semiPerim = $this->perimeter() / 2;
     return sqrt($semiPerim  * ($semiPerim - $this->sideA) 
-                      * ($semiPerim - $this->sideB)
-                      * ($semiPerim - $this->sideC)
+                            * ($semiPerim - $this->sideB)
+                            * ($semiPerim - $this->sideC)
                 );
   }
 }
