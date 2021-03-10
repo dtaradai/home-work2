@@ -6,7 +6,7 @@ require_once 'functions.php';
 spl_autoload_register('project_autoload');
 
 $level = 'ERROR';
-$message = ' /\/\/5 ';
+$message = 'hkgcjghjklk';
 
 $file = Logger::getInstance($message, $level);
 
@@ -42,7 +42,7 @@ function decimToBinary($decimal)
   }
 }
 
-$decimal = 0;
+$decimal = 5;
 
 try {
     if ($decimal == 0) {
