@@ -1,5 +1,6 @@
 <?php
 namespace Figure;
+use Exception;
 
 class Triangle extends Figure {
   public $sideA;
@@ -7,14 +8,17 @@ class Triangle extends Figure {
   public $sideC;
 
   public function __construct($sideA, $sideB, $sideC) {
-    if (is_int($sideA) && is_int($sideB) && is_int($sideC)) {
+
+    try{
+      if (!is_int($sideA) || !is_int($sideB) || !is_int($sideC) ) {
+        throw new Exception('Ошибка при введении данных при создании экземпляра класса Triangle.');
+      }
       $this->sideA = $sideA;
       $this->sideB = $sideB;
       $this->sideC = $sideC;
-    } else {
-      exit ('Error $side');
+    } catch (Exception $e) {
+      echo $e->getMessage();
     }
-    
   }
 
   public function perimeter() {

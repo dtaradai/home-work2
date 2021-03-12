@@ -1,15 +1,21 @@
 <?php
 namespace Figure;
+use Exception;
 
 class Circle extends Figure {
+
   public $radius;
 
   public function __construct($radius) {
-    if (is_int($radius) || $radius > 0) {
+
+    try{
+      if (!is_int($radius) ) {
+        throw new Exception('Ошибка при введении данных при создании экземпляра класса Circle.');
+      }
       $this->radius = $radius;
-    } else {
-      exit ('Error $radius');
-    } 
+    } catch (Exception $e) {
+      echo $e->getMessage();
+    }
   }
 
   public function perimeter() {

@@ -1,16 +1,25 @@
 <?php
 namespace Figure;
 
+use Exception;
+
 class Rectangle extends Figure {
   public $width;
   public $height;
 
   public function __construct($width, $height) {
-    if (is_int($width) && is_int($height)) {
+
+    try{
+
+      if (!is_int($width) || !is_int($height)) {
+        
+        throw new Exception('Ошибка при введении данных при создании экземпляра класса Rectangle.');
+      }
+      
       $this->width = $width;
       $this->height = $height;
-    } else {
-      exit ('Error $width or $height');
+    } catch (Exception $e) {
+      echo $e->getMessage();
     }
     
   }

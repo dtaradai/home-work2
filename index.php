@@ -11,13 +11,6 @@ $message = 'hkgcjghjklk';
 $file = Logger::getInstance($message, $level);
 
 
-use Figure\Rectangle;
-
-//$rectangle = new Rectangle(5, 8 );
-// $triangle = new Triangle(5, 6, 7);
-// $circle = new Circle(5);
-
-
 //-----------Исключения-----------------
 
 function decimToBinary($decimal)
@@ -42,7 +35,6 @@ function decimToBinary($decimal)
   }
 }
 
-$decimal = 5;
 
 try {
     if ($decimal == 0) {

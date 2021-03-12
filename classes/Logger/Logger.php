@@ -11,8 +11,7 @@ class Logger {
   private static $_logger = null;
 
   // Делаем невозможным создание объекта класса на прямую
-  private function __construct() {
-  }
+  private function __construct() {}
 
   // Метод для создания объекта класса
   public static function getInstance($message, $level = 'DEFAUULT') : Logger {
